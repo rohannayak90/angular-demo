@@ -1,2 +1,5 @@
-<h4>Angular Modal Test</h4>
-<button mat-raised-button color="accent" (click)="openModal()">Open Modal</button>
+<!-- 2 Column layout -->
+<mat-nav-list>
+  <a mat-list-item *ngFor="let link of links" routerLink="{{ link.value }}"> {{ link.label }} </a>
+</mat-nav-list>
+<router-outlet></router-outlet>

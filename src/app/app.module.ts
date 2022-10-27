@@ -5,16 +5,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ConfirmationModalComponent } from './components/confirmation-modal/confirmation-modal.component';
+import { ConfirmationModalComponent } from './components/modal/confirmation-modal/confirmation-modal.component';
+import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { UserDetailsEditorComponent } from './components/reactive-forms/user-details-editor/user-details-editor.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConfirmationModalComponent
+    ConfirmationModalComponent,
+    ReactiveFormsComponent,
+    ModalComponent,
+    UserDetailsEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +31,7 @@ import { ConfirmationModalComponent } from './components/confirmation-modal/conf
     MatInputModule,
     MatButtonModule,
     MatDialogModule,
+    MatListModule,
     AppRoutingModule,
   ],
   providers: [],

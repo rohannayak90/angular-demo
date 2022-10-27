@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-
-import { ConfirmationModalComponent } from './components/confirmation-modal/confirmation-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -10,17 +7,11 @@ import { ConfirmationModalComponent } from './components/confirmation-modal/conf
 })
 export class AppComponent {
   title = 'angular-demo';
-  dialogRef: MatDialogRef<any, any> | undefined;
+  links: Array<{ label: string, value: string }> = [
+    { label: 'Modal', value: './modal' },
+    { label: 'Reactive Forms', value: 'reactive-forms' },
+    // { label: '', value: '' },
+  ];
 
-  constructor(private dialog: MatDialog) {}
-
-  openModal() {
-    this.dialogRef = this.dialog.open(ConfirmationModalComponent, {
-      // height: '400px', width: '600px',
-      data: 'Sam'
-    });
-    this.dialogRef.afterClosed().subscribe((response: string) => {
-      console.log('closed', response);
-    });
-  }
+  
 }
